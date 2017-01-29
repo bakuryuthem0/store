@@ -6,7 +6,11 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"gloudemans/shoppingcart": "~1.2",
-		"intervention/image": "~2.1"
+		"intervention/image": "~2.1",
+		"stripe/stripe-php": "3.*",
+		"fzaninotto/faker" : "dev-master",
+		"rtconner/laravel-tagging": "~0.5",
+		"braintree/braintree_php" : "3.16.0"
 	},
 	"autoload": {
 		"classmap": [

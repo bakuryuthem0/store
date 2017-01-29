@@ -1,0 +1,261 @@
+.row
+{
+	margin: 0;
+	padding: 0;
+}
+.menu-list li
+{
+	display: inline;
+	margin-right: 10px;
+}
+.product_list_header input.button
+{
+	background: url(../images/cart.png) no-repeat 75px 9px
+}
+.w3l_banner_nav_right.main-slider
+{
+	width: 100%;
+}
+
+.banner .slides li
+{
+	position: relative;
+	height: 500px;
+	overflow: hidden;
+}
+.banner .slides li .banner-text
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+.banner .slides li img
+{
+	height: 100%;
+	width: auto;
+	margin: 0 auto;
+}
+.banner .slides li .banner-text-valigned
+{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+         -o-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.banner .slides li .banner-text-valigned .more
+{
+	float: none;
+	margin-left: 0;
+	width: auto;
+}
+.banner .slides li .banner-text-valigned .more:hover
+{
+	color: #FA1818;
+}
+.top_brand_left
+{
+	padding: 0.5em;
+	border: 1px solid #D7D7D7;
+}
+.top_brand_left .tag
+{
+	position: relative;
+	top: 0;
+	right: 0;
+}
+.top_brand_left .item-image
+{
+	height: 525px;
+}
+.top_brand_left .agile_top_brand_left_grid1
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid transparent;
+}
+.top_brand_left .agile_top_brand_left_grid1 figure
+{
+	width: 100%;
+	height: 100%;
+}
+.top_brand_left .agile_top_brand_left_grid1 figure .snipcart-item
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0,0,0,0.5);
+}
+.top_brand_left .agile_top_brand_left_grid1 figure .snipcart-item p, .top_brand_left .agile_top_brand_left_grid1 figure .snipcart-item h4
+{
+    color: #fff;
+}
+#flexiselDemo1, #flexiselDemo3 {
+	display: none;
+}
+.nbs-flexisel-container {
+	position: relative;
+	max-width: 100%;
+	    margin-top: 3em;
+}
+.nbs-flexisel-ul {
+	position: relative;
+	width: 9999px;
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center;
+}
+.nbs-flexisel-inner {
+	overflow: hidden;
+	margin: 0 auto;
+}
+.nbs-flexisel-item {
+	float: left;
+	margin:0px;
+	padding:0px;
+	cursor: pointer;
+	position: relative;
+	line-height: 0px;
+}
+.nbs-flexisel-item > img {
+	cursor: pointer;
+	position: relative;
+	margin-top:10px;
+	margin-bottom: 10px;
+	max-width:350px;
+	max-height:500px;
+	display:inline-block;
+}
+.grid-flex{
+	margin:20px 0 20px 0;
+}
+.nbs-flexisel-item > img {
+	cursor: pointer;
+	position: relative;
+	width: 90%;
+}
+/*** Navigation ***/
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+	width: 45px;
+	height: 45px;
+	position: absolute;
+	cursor: pointer;
+	z-index: 100;
+	margin-top:-2em;
+}
+.nbs-flexisel-nav-left {
+	left: 0px;
+	background: url(../images/arrows.png) no-repeat -8px -7px;
+}
+.nbs-flexisel-nav-right {
+	right: 0px;
+	background: url(../images/arrows.png) no-repeat -61px -7px;
+}
+.other-products {
+    padding: 60px 0;
+}
+.liked-product{
+	margin-top:0;
+}
+.side-bar-title
+{
+	padding: 1em 0 1em 0;
+}
+.social-icons ul
+{
+	list-style: none;
+}
+.social-icons ul li
+{
+	display: inline;
+	margin-right: 5px;
+}
+.social-icons ul li a
+{
+	color: #333;
+}
+.w3ls_w3l_banner_nav_right_grid
+{
+	padding: 0 30px 5em;
+}
+.arrow-sorted
+{
+	cursor: pointer;
+}
+.change-lang
+{
+	left: 0;
+}
+.module.form-module
+{
+	margin: 0;
+}
+.w3ls_logo_products_left1
+{
+    float: none;
+    display: block;
+    margin: 2.3em 0 auto;
+    text-align: center;
+}
+.list-normal
+{
+	padding-left: 20px;
+}
+
+.center-block
+{
+	float: none;
+}
+.w3agile_description p
+{
+	width: 100%;
+}
+.media-left.response-text-left {
+    width: 10%;
+    float: left;
+    margin-right: 2%;
+}
+.response-text-right ul li {
+    display: inline-block;
+    color: #B6B8B5;
+    font-size: 1em;
+    font-weight: 600;
+    margin-right: 16px;
+	font-family: 'PlayfairDisplay-Regular';
+}
+.response-text-right ul li a {
+    color: #887f66;
+    font-size: 12px;
+    font-weight: 600;
+}
+.media, .media .media {
+    margin-top: 25px;
+}
+p.tab-text {
+    line-height: 26px;
+    color: #B9B9B9;
+	font-size: 14px;
+}
+.media-left.response-text-left h5 {
+    font-size: 14px;
+    text-align: Center;
+    margin-top: 3px;
+}
+.media-left.response-text-left h5 a {
+    color: #000;
+}
+.media-left.response-text-left h5 a:hover {
+    color: #816263;
+}
+.media-left.response-text-left img {
+    width: 100%;
+}

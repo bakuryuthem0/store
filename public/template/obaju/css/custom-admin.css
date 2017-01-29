@@ -1,0 +1,91 @@
+.item-img img
+{
+	width: 100%;
+}
+.file-text
+{
+	font-size: 13px;
+}
+.bg-dark
+{
+	background-color: #333;
+}
+.light-text
+{
+	color: #fff;
+}
+.bg-light
+{
+	background-color: #fff;
+}
+
+.box
+{
+	padding: 2em 3em;
+    border-radius: 8px;
+}
+.responseAjax,.to-clone
+{
+	display: none;
+}
+.responseAjax.active, .to-clone.active
+{
+	display: block
+}
+.input-group, .formulario
+{
+	margin-bottom: 1em;
+}
+
+.login-box
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	    -ms-transform: translate(-50%,-50%);
+	     -o-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+.box-bordered
+{
+	border: 1px solid #333;
+}
+.alert
+{
+	margin-top: 1em;
+}
+.navbar-brand.admin-navbar-brand
+{
+	height: auto;
+}
+.navbar-brand.admin-navbar-brand img
+{
+	max-height: 40px;
+}
+.miniLoader
+{
+	display: none;
+	width: 15px;
+	margin-right: 1em;
+}
+.miniLoader.active
+{
+	display: inline-block;
+}
+.no-padding
+{
+	padding: 0;
+}
+
+.no-padding-half:nth-child(odd)
+{
+	padding-left: 0;
+}
+.to-clone .close
+{
+	position: absolute;
+    top: -15px;
+    right: 0;
+}

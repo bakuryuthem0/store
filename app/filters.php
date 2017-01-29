@@ -32,10 +32,9 @@ App::after(function($request, $response)
 | integrates HTTP Basic authentication for quick, simple checking.
 |
 */
-
 Route::filter('auth', function()
 {
-	if (Auth::guest())
+	if (!Auth::check())
 	{
 		if (Request::ajax())
 		{
@@ -43,12 +42,70 @@ Route::filter('auth', function()
 		}
 		else
 		{
-			return Redirect::guest('login');
+			return Redirect::to('inicio/login');
 		}
 	}
 });
-
-
+Route::filter('auth_admin',function(){
+	if (Auth::check() && Auth::user()->role_id != 3) {
+		if (Request::ajax())
+		{
+			return Response::make('Unauthorized', 401);
+		}
+		else
+		{
+			return Redirect::to('/');
+		}	
+	}elseif(!Auth::check())
+	{
+		if (Request::ajax())
+		{
+			return Response::make('Unauthorized', 401);
+		}
+		else
+		{
+			return Redirect::to('administrador/login');
+		}
+	}
+});
+Route::filter('no_auth', function()
+{
+	if (Request::ajax()) {
+		if (Auth::check()) 
+		{
+			return Response::json(array(
+				'type' => 'danger',
+				'msg'  => 'Error 403, Acceso restringido.',
+			));
+		}		
+	}else
+	{
+		if (Auth::check()) 
+		{
+			return Redirect::to('administrador/');
+		}
+		
+	}
+	
+});
+Route::filter('role_check',function()
+{
+	if (Request::ajax()) {
+		if (Auth::user()->role_id != 3 && Auth::user()->role_id != 2) 
+		{
+			return Response::json(array(
+				'type' => 'danger',
+				'msg'  => 'Error 403, Acceso restringido.',
+			));
+		}		
+	}else
+	{
+		if (Auth::user()->role_id != 3 && Auth::user()->role_id != 2) {
+			return Redirect::to('/');
+		}
+		
+	}
+});
 Route::filter('auth.basic', function()
 {
 	return Auth::basic();
@@ -83,8 +140,15 @@ Route::filter('guest', function()
 
 Route::filter('csrf', function()
 {
-	if (Session::token() != Input::get('_token'))
+	if (Request::ajax()) {
+		if (Session::token() !== Request::header('csrftoken')) {
+			return Response::json(array(
+				'type' => 'danger','msg' => Lang::get('lang.csrf_error')
+			));			
+		}		
+	}elseif (Session::token() != Input::get('_token'))
 	{
-		throw new Illuminate\Session\TokenMismatchException;
+		Session::flash('danger',Lang::get('lang.csrf_error'));
+		return Redirect::back();
 	}
 });

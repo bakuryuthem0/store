@@ -17,6 +17,7 @@ ClassLoader::addDirectories(array(
 	app_path().'/controllers',
 	app_path().'/models',
 	app_path().'/database/seeds',
+	app_path().'/libraries',
 
 ));
 
@@ -45,7 +46,9 @@ Log::useFiles(storage_path().'/logs/laravel.log');
 | shown, which includes a detailed stack trace during debug.
 |
 */
-
+if (Session::has('lang')) {
+	App::setLocale(Session::get('lang'));
+}
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
@@ -78,4 +81,8 @@ App::down(function()
 |
 */
 
+App::singleton('stores', function($app,$subdomain)
+{
+   return  Stores::where('subdomain','=',$subdomain)->first(); 
+});
 require app_path().'/filters.php';
